@@ -8,7 +8,7 @@
 SELECT YEAR(orders.[OrderDate]) AS 'Year',
 		COUNT(orders.OrderID) AS 'Total'
 FROM [DBO].[Orders] orders
-GROUP BY orders.OrderDate;
+GROUP BY YEAR(orders.[OrderDate]);
 
 SELECT COUNT(orders.OrderID) AS 'Total'
 FROM [DBO].[Orders] orders;
